@@ -3,14 +3,17 @@
 
 function getLength(str) {
   // return the length of the passed string
+  return str.length
 }
 
 function putNamesTogether(firstName, lastName) {
   // return the first and last names with a space between them
+  return firstName + ' ' + lastName
 }
 
 function capitaliseString(str) {
   // return the passed string with its first letter capitalised
+  return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 function dontShoutSentence(SENTENCE) {
@@ -20,20 +23,36 @@ function dontShoutSentence(SENTENCE) {
 
 function getMiddle(str) {
   // return the middle (or middle two) character(s) of the passed string
+  var position;
+  var length;
+
+  if(str.length % 2 == 1) {
+    position = str.length / 2;
+    length = 1;
+  }
+  else {
+    position = str.length / 2 - 1;
+    length = 2;
+  }
+  return str.substring(position, position + length)
 }
 
 function getLastWord(words) {
   // return the last word of a sentence
   // you can assume words doesn't have a period at the end
+  return words.substring(words.lastIndexOf(' ') + 1);
 }
 
 function hyphenateWords(words) {
   // return the passed string with the spaces replaced by hyphens ("-")
+  return words.replace(/\s+/g, '-');
 }
 
 function convertToCamelCase(words) {
   // convert the passed string of space-separated words to camel case
   // camel case looks like this --> camelCaseLooksLikeThis
+ words.toLowerCase().replace(/(?:^\w|[A-Z]||\b\w)/g, (ltr, idx) =>vidx === 0 ? ltr.toLowerCase():
+ ltr.toUpperCase()).replace(/\s+/g, '');
 }
 
 function passwordValidation(password) {

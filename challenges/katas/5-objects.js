@@ -5,6 +5,12 @@ function isOver40(user) {
   /*
     This function takes a user object with a property of age. It should return true if the user is over 40 and false if the user is 40 or younger.
     */
+   if (user > 40){
+    return true
+   }
+   else {
+    return false
+   };
 }
 
 function getUserAge(user) {
@@ -25,6 +31,7 @@ function getUserPetAge(user) {
       };
       This function should access the age property in the nested pet object and return the value
   */
+ return user.pet.age;
 }
 
 function createProduct() {
@@ -38,6 +45,8 @@ function addPriceToProduct(product, price) {
     { type: 'Tofu slices' }
     Add a price property to this object and set its value to the price passed in as an argument. Then return the object.
     */
+   product.price = price;
+   return product;
 }
 
 function getPropertyOfProduct(product, property) {
@@ -46,6 +55,7 @@ function getPropertyOfProduct(product, property) {
     Given a 'property' as an argument, return the value associated with that 'property'. 
     E.g. if asked for the price 'property' of the above satsumas object, your function would return '£1.09'.
   */
+  return product[property];
 }
 
 function addPropertyToProduct(product, property, value) {
@@ -55,6 +65,7 @@ function addPropertyToProduct(product, property, value) {
     E.g. if given the 'property' 'length' and the value '2h 36m' (yes it really is that long) 
     your function should return { type: 'Terminator 2: Judgement Day', price: '£6.99', quantity: 1, length: '2h 36m' }
   */
+ return product.property.value;
 }
 
 function createNorthcoder(name, yearOfBirth) {
@@ -84,6 +95,7 @@ function createUserString(userObj) {
   // returns a string with the user's details in the form:
   // 'name: Mitch, age: 27, language: Javascript';
   // Note - this is a good use case of string template literals.
+  
 }
 
 function getNorthcodersNames(northcoders) {
